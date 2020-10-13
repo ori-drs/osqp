@@ -339,6 +339,8 @@ if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/osqp-config.cmake)
   file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/osqp-config.cmake "include(\"\${CMAKE_CURRENT_LIST_DIR}/osqp-targets.cmake\")\n")
 endif()
 
+# Install package.xml to share
+install(FILES package.xml DESTINATION share/cmake/osqp)
 
 # Create CMake packages for the install directory
 # ----------------------------------------------
